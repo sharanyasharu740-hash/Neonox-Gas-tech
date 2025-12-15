@@ -4,36 +4,70 @@
     <meta charset="UTF-8">
     <title>Neonox Gas Tech</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <style>
         body {
             margin: 0;
-            font-family: Arial, Helvetica, sans-serif;
-            background-color: #f4f6f8;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background-color: #eef2f6;
             color: #333;
         }
+
         header {
-            background-color: #003366;
+            background: linear-gradient(135deg, #002b5c, #004a99);
             color: white;
-            padding: 30px;
+            padding: 40px 20px;
             text-align: center;
         }
+
+        header img {
+            max-width: 140px;
+            margin-bottom: 12px;
+        }
+
+        nav {
+            background-color: #002b5c;
+            padding: 12px;
+            text-align: center;
+        }
+
+        nav a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        nav a:hover {
+            text-decoration: underline;
+        }
+
         section {
             padding: 30px;
-            max-width: 1000px;
-            margin: auto;
+            max-width: 1100px;
+            margin: 30px auto;
             background: white;
-            margin-top: 20px;
-            border-radius: 6px;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0,0,0,0.08);
         }
+
         h2 {
-            color: #003366;
+            color: #002b5c;
+            border-bottom: 2px solid #004a99;
+            padding-bottom: 8px;
         }
+
+        ul {
+            padding-left: 20px;
+        }
+
         footer {
-            background-color: #003366;
+            background-color: #002b5c;
             color: white;
             text-align: center;
-            padding: 15px;
-            margin-top: 30px;
+            padding: 18px;
+            margin-top: 40px;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -41,30 +75,60 @@
 <body>
 
 <header>
+    <img src="/Neonox-Gas-tech/logo.png" alt="Neonox Gas Tech Logo">
     <h1>Neonox Gas Tech</h1>
     <p>High-purity gas pipeline solutions with precision orbital welding</p>
 </header>
 
-<section>
+<nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#industries">Industries</a>
+    <a href="#contact">Contact</a>
+</nav>
+
+<section id="about">
     <h2>About Us</h2>
     <p>
-        Neonox Gas Tech specializes in orbital welding, high-purity gas pipeline
-        fabrication, and industrial gas systems for critical applications.
+        <strong>Neonox Gas Tech</strong> specializes in high-precision orbital welding,
+        stainless steel gas pipeline fabrication, and industrial gas systems
+        for high-purity and hazardous gas applications.
+    </p>
+    <p>
+        We deliver turnkey solutions including design, fabrication, installation,
+        testing, and commissioning for critical industries.
     </p>
 </section>
 
-<section>
+<section id="services">
     <h2>Our Services</h2>
     <ul>
         <li>Orbital Welding (1/8” – 1/2” SS Tubes)</li>
-        <li>High-Purity Gas Pipeline Installation</li>
-        <li>Industrial Gas Manifold Systems</li>
+        <li>High-Purity Stainless Steel Gas Pipelines</li>
+        <li>Industrial Gas Manifold Design & Installation</li>
         <li>TIG Welding for SS & Alloy Piping</li>
-        <li>Specialty & Hazardous Gas Piping</li>
+        <li>Medical Gas Pipeline Systems (MGPS)</li>
+        <li>Cylinder Filling Station Piping</li>
+        <li>Testing, Commissioning & Annual Maintenance</li>
+    </ul>
+
+    <p><strong>Gases handled:</strong> Oxygen, Nitrogen, Argon, CO₂, Hydrogen, Helium,
+        SF₆, Carbon Monoxide, Methane, Ethylene, Hydrocarbons</p>
+</section>
+
+<section id="industries">
+    <h2>Industries We Serve</h2>
+    <ul>
+        <li>Pharmaceutical & Biotech Plants</li>
+        <li>Semiconductor & Electronics Manufacturing</li>
+        <li>Oil & Gas Refineries</li>
+        <li>Aerospace & Defence Facilities</li>
+        <li>Hospitals & Medical Gas Systems</li>
+        <li>Chemical & Industrial Gas Plants</li>
     </ul>
 </section>
 
-<section>
+<section id="contact">
     <h2>Contact Us</h2>
     <p><strong>Phone:</strong> +91-XXXXXXXXXX</p>
     <p><strong>Email:</strong> yourname@company.com</p>
@@ -77,4 +141,3 @@
 
 </body>
 </html>
-
