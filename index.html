@@ -1,225 +1,247 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Neonox Gas Tech | Orbital Welding & Gas Pipeline Experts</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<title>Neonox Gas Tech | Industrial Gas & Orbital Welding Experts</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    :root {
-      --primary: #0a4da3;
-      --secondary: #f4f7fb;
-      --text: #333;
-    }
+<style>
+:root{
+  --primary:#0a4da3;
+  --dark:#0b1f3a;
+  --light:#f4f7fb;
+  --text:#333;
+}
 
-    * {
-      box-sizing: border-box;
-    }
+*{box-sizing:border-box;}
 
-    body {
-      margin: 0;
-      font-family: "Segoe UI", Arial, sans-serif;
-      color: var(--text);
-      line-height: 1.6;
-      background: #ffffff;
-    }
+body{
+  margin:0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  color:var(--text);
+  line-height:1.6;
+}
 
-    /* ---------- HEADER ---------- */
-    header {
-      text-align: center;
-      padding: 24px 16px;
-      border-bottom: 1px solid #e6e6e6;
-      background: #fff;
-    }
+/* ===== HEADER ===== */
+header{
+  text-align:center;
+  padding:20px;
+  border-bottom:1px solid #e6e6e6;
+  background:#fff;
+}
+header img{
+  height:85px;
+}
+header h1{
+  margin:10px 0 5px;
+  color:var(--primary);
+  font-size:30px;
+}
+header p{
+  margin:0;
+  font-size:15px;
+  color:#555;
+}
 
-    header img {
-      height: 90px;
-      width: auto;
-      margin-bottom: 12px;
-    }
+/* ===== HERO ===== */
+.hero{
+  background:linear-gradient(rgba(11,31,58,.75),rgba(11,31,58,.75)),
+             url("https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:90px 20px;
+  text-align:center;
+}
+.hero h2{
+  font-size:36px;
+  margin-bottom:15px;
+}
+.hero p{
+  max-width:800px;
+  margin:auto;
+  font-size:18px;
+}
+.hero button{
+  margin-top:25px;
+  padding:14px 32px;
+  font-size:16px;
+  background:var(--primary);
+  color:white;
+  border:none;
+  cursor:pointer;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-      color: var(--primary);
-    }
+/* ===== SECTIONS ===== */
+section{
+  max-width:1100px;
+  margin:auto;
+  padding:60px 20px;
+}
+section h3{
+  color:var(--primary);
+  font-size:26px;
+  margin-bottom:20px;
+}
 
-    header p {
-      margin: 6px 0 0;
-      font-size: 15px;
-      color: #555;
-    }
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+}
+.card{
+  background:white;
+  padding:25px;
+  border:1px solid #e5e5e5;
+}
+.card h4{
+  margin-top:0;
+  color:var(--dark);
+}
 
-    /* ---------- SECTIONS ---------- */
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 50px 20px;
-    }
+/* ===== SERVICES ===== */
+.services{
+  background:var(--light);
+}
 
-    section h2 {
-      color: var(--primary);
-      margin-bottom: 16px;
-      font-size: 24px;
-    }
+/* ===== CONTACT ===== */
+.contact{
+  background:#fff;
+}
+form{
+  max-width:450px;
+}
+input,textarea{
+  width:100%;
+  padding:12px;
+  margin-bottom:12px;
+  border:1px solid #ccc;
+}
+button.submit{
+  background:var(--primary);
+  color:white;
+  border:none;
+  padding:12px 28px;
+  cursor:pointer;
+}
 
-    section p {
-      margin-bottom: 14px;
-    }
+/* ===== FOOTER ===== */
+footer{
+  background:var(--dark);
+  color:white;
+  text-align:center;
+  padding:25px;
+  font-size:14px;
+}
 
-    ul {
-      padding-left: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    /* ---------- SERVICES HIGHLIGHT ---------- */
-    #services {
-      background: var(--secondary);
-    }
-
-    /* ---------- CONTACT ---------- */
-    #contact {
-      background: #ffffff;
-    }
-
-    form {
-      max-width: 420px;
-      margin-top: 20px;
-    }
-
-    input, textarea {
-      width: 100%;
-      padding: 12px;
-      margin-bottom: 12px;
-      border: 1px solid #ccc;
-      border-radius: 4px;
-      font-size: 14px;
-    }
-
-    button {
-      background: var(--primary);
-      color: white;
-      border: none;
-      padding: 12px 26px;
-      font-size: 15px;
-      border-radius: 4px;
-      cursor: pointer;
-    }
-
-    button:hover {
-      opacity: 0.9;
-    }
-
-    /* ---------- FOOTER ---------- */
-    footer {
-      background: var(--primary);
-      color: #fff;
-      text-align: center;
-      padding: 18px;
-      font-size: 14px;
-    }
-
-    /* ---------- MOBILE OPTIMIZATION ---------- */
-    @media (max-width: 600px) {
-      header img {
-        height: 70px;
-      }
-
-      header h1 {
-        font-size: 22px;
-      }
-
-      section {
-        padding: 36px 16px;
-      }
-    }
-  </style>
+/* ===== MOBILE ===== */
+@media(max-width:600px){
+  .hero h2{font-size:28px;}
+  header h1{font-size:24px;}
+}
+</style>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header>
-    <img src="Neonox_Gas.png" alt="Neonox Gas Tech Logo">
-    <h1>Neonox Gas Tech</h1>
-    <p>High-Precision Orbital Welding & Gas Pipeline Systems</p>
-  </header>
+<!-- HEADER -->
+<header>
+  <img src="Neonox_Gas.png" alt="Neonox Gas Tech Logo">
+  <h1>Neonox Gas Tech</h1>
+  <p>Industrial Gas • Orbital Welding • High-Purity Pipeline Systems</p>
+</header>
 
-  <!-- ABOUT -->
-  <section id="about">
-    <h2>About Us</h2>
-    <p>
-      <strong>Neonox Gas Tech</strong> specializes in high-precision orbital welding
-      and gas pipeline systems for high-purity and hazardous gas applications.
-    </p>
-    <p>
-      We deliver turnkey solutions including design, fabrication, installation,
-      testing, and commissioning with a strong focus on safety, accuracy,
-      and international quality standards.
-    </p>
-  </section>
+<!-- HERO -->
+<div class="hero">
+  <h2>Engineering Safe & Reliable Gas Infrastructure</h2>
+  <p>
+    Delivering world-class high-purity and hazardous gas pipeline solutions
+    for semiconductor, pharmaceutical, medical, and industrial sectors.
+  </p>
+  <button onclick="document.getElementById('contact').scrollIntoView()">Request a Quote</button>
+</div>
 
-  <!-- WHY US -->
-  <section id="why-us">
-    <h2>Why Choose Neonox Gas Tech</h2>
-    <ul>
-      <li>Certified and experienced orbital welding professionals</li>
-      <li>High-purity, leak-proof pipeline execution</li>
-      <li>Advanced orbital welding and TIG equipment</li>
-      <li>Strict safety and compliance standards</li>
-      <li>On-time project delivery</li>
-      <li>Cost-effective engineering solutions</li>
-    </ul>
-  </section>
+<!-- ABOUT -->
+<section>
+  <h3>About Neonox Gas Tech</h3>
+  <p>
+    <strong>Neonox Gas Tech</strong> is a specialized engineering company focused on
+    orbital welding and precision gas pipeline execution. Our systems meet
+    international safety, purity, and compliance standards.
+  </p>
+  <p>
+    We support critical industries where accuracy, cleanliness, and reliability
+    are non-negotiable.
+  </p>
+</section>
 
-  <!-- SERVICES -->
-  <section id="services">
-    <h2>Our Services</h2>
-    <ul>
-      <li>Orbital Welding (1/8” to 1/2” SS Tubes)</li>
-      <li>High-Purity Stainless Steel Gas Pipelines</li>
-      <li>Industrial Gas Manifold Design & Installation</li>
-      <li>TIG Welding for Stainless Steel & Alloy Piping</li>
-      <li>Medical Gas Pipeline Systems (MGPS)</li>
-      <li>Specialty & Hazardous Gas Piping</li>
-      <li>Pressure Testing, Commissioning & AMC</li>
-    </ul>
+<!-- WHY US -->
+<section>
+  <h3>Why Global Clients Choose Us</h3>
+  <div class="grid">
+    <div class="card">
+      <h4>Certified Expertise</h4>
+      <p>Highly trained orbital welding professionals with industry certifications.</p>
+    </div>
+    <div class="card">
+      <h4>High-Purity Execution</h4>
+      <p>Leak-free, contamination-free pipelines for critical gas systems.</p>
+    </div>
+    <div class="card">
+      <h4>Safety First</h4>
+      <p>Strict adherence to hazardous gas safety and compliance standards.</p>
+    </div>
+    <div class="card">
+      <h4>Turnkey Delivery</h4>
+      <p>Design, fabrication, installation, testing & commissioning.</p>
+    </div>
+  </div>
+</section>
 
-    <p>
-      <strong>Gases handled:</strong>
-      Oxygen, Nitrogen, Argon, CO₂, Hydrogen, Helium, SF₆,
-      Carbon Monoxide, Methane, Ethylene, Hydrocarbons.
-    </p>
-  </section>
+<!-- SERVICES -->
+<section class="services">
+  <h3>Our Services</h3>
+  <div class="grid">
+    <div class="card">Orbital Welding (1/8” – 1/2” SS Tubes)</div>
+    <div class="card">High-Purity Stainless Steel Gas Pipelines</div>
+    <div class="card">Industrial & Specialty Gas Manifolds</div>
+    <div class="card">Medical Gas Pipeline Systems (MGPS)</div>
+    <div class="card">Hazardous & Specialty Gas Installations</div>
+    <div class="card">Pressure Testing, Commissioning & AMC</div>
+  </div>
 
-  <!-- CONTACT -->
-  <section id="contact">
-    <h2>Contact Us</h2>
-    <p>Need a quotation or project support? Reach out to us.</p>
+  <p style="margin-top:20px;">
+    <strong>Gases handled:</strong>
+    Oxygen, Nitrogen, Argon, CO₂, Hydrogen, Helium, SF₆,
+    Carbon Monoxide, Methane, Ethylene, Hydrocarbons.
+  </p>
+</section>
 
-    <form action="https://formspree.io/f/xqarvayz" method="POST">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="email" name="email" placeholder="Your Email" required>
-      <input type="text" name="phone" placeholder="Phone Number">
-      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<!-- CONTACT -->
+<section id="contact" class="contact">
+  <h3>Contact Us</h3>
+  <p>Discuss your project requirements with our engineering team.</p>
 
-      <button type="submit">Send Message</button>
-    </form>
+  <form action="https://formspree.io/f/xqarvayz" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Phone Number">
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button class="submit" type="submit">Send Message</button>
+  </form>
 
-    <p style="margin-top:18px;">
-      📧 neonoxgastech@gmail.com <br>
-      📞 +91-8867123061 <br>
-      📍 India
-    </p>
-  </section>
+  <p style="margin-top:20px;">
+    📧 neonoxgastech@gmail.com<br>
+    📞 +91-8867123061<br>
+    📍 India
+  </p>
+</section>
 
-  <!-- FOOTER -->
-  <footer>
-    © 2025 Neonox Gas Tech. All Rights Reserved.
-  </footer>
+<!-- FOOTER -->
+<footer>
+  © 2025 Neonox Gas Tech. Engineered for Safety. Built for Precision.
+</footer>
 
 </body>
 </html>
