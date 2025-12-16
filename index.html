@@ -2,51 +2,69 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Neonox Gas Tech</title>
+  <title>Neonox Gas Tech | Orbital Welding & Gas Pipeline Experts</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      line-height: 1.6;
-      color: #333;
+    :root {
+      --primary: #0a4da3;
+      --secondary: #f4f7fb;
+      --text: #333;
     }
 
-    header {
-      display: flex;
-      align-items: center;
-      gap: 15px;
-      padding: 20px;
-      border-bottom: 1px solid #eee;
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Segoe UI", Arial, sans-serif;
+      color: var(--text);
+      line-height: 1.6;
       background: #ffffff;
     }
 
+    /* ---------- HEADER ---------- */
+    header {
+      text-align: center;
+      padding: 24px 16px;
+      border-bottom: 1px solid #e6e6e6;
+      background: #fff;
+    }
+
     header img {
-      height: 70px;
+      height: 90px;
       width: auto;
+      margin-bottom: 12px;
     }
 
     header h1 {
       margin: 0;
-      color: #0a4da3;
+      font-size: 28px;
+      color: var(--primary);
     }
 
     header p {
-      margin: 4px 0 0;
-      font-size: 14px;
+      margin: 6px 0 0;
+      font-size: 15px;
       color: #555;
     }
 
+    /* ---------- SECTIONS ---------- */
     section {
-      padding: 40px 20px;
-      max-width: 900px;
+      max-width: 1000px;
       margin: auto;
+      padding: 50px 20px;
     }
 
     section h2 {
-      color: #0a4da3;
-      margin-bottom: 15px;
+      color: var(--primary);
+      margin-bottom: 16px;
+      font-size: 24px;
+    }
+
+    section p {
+      margin-bottom: 14px;
     }
 
     ul {
@@ -54,38 +72,83 @@
     }
 
     li {
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
+    /* ---------- SERVICES HIGHLIGHT ---------- */
+    #services {
+      background: var(--secondary);
+    }
+
+    /* ---------- CONTACT ---------- */
     #contact {
-      background: #f7f9fc;
+      background: #ffffff;
+    }
+
+    form {
+      max-width: 420px;
+      margin-top: 20px;
+    }
+
+    input, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-bottom: 12px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 14px;
     }
 
     button {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 12px 26px;
+      font-size: 15px;
+      border-radius: 4px;
       cursor: pointer;
     }
 
+    button:hover {
+      opacity: 0.9;
+    }
+
+    /* ---------- FOOTER ---------- */
     footer {
+      background: var(--primary);
+      color: #fff;
       text-align: center;
-      padding: 20px;
-      background: #0a4da3;
-      color: white;
+      padding: 18px;
+      font-size: 14px;
+    }
+
+    /* ---------- MOBILE OPTIMIZATION ---------- */
+    @media (max-width: 600px) {
+      header img {
+        height: 70px;
+      }
+
+      header h1 {
+        font-size: 22px;
+      }
+
+      section {
+        padding: 36px 16px;
+      }
     }
   </style>
 </head>
 
 <body>
 
-  <!-- Header with Logo -->
+  <!-- HEADER -->
   <header>
     <img src="Neonox_Gas.png" alt="Neonox Gas Tech Logo">
-    <div>
-      <h1>Neonox Gas Tech</h1>
-      <p>High-Precision Orbital Welding & Gas Pipeline Systems</p>
-    </div>
+    <h1>Neonox Gas Tech</h1>
+    <p>High-Precision Orbital Welding & Gas Pipeline Systems</p>
   </header>
 
-  <!-- About Section -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Us</h2>
     <p>
@@ -99,7 +162,7 @@
     </p>
   </section>
 
-  <!-- Why Choose Us -->
+  <!-- WHY US -->
   <section id="why-us">
     <h2>Why Choose Neonox Gas Tech</h2>
     <ul>
@@ -112,7 +175,7 @@
     </ul>
   </section>
 
-  <!-- Services -->
+  <!-- SERVICES -->
   <section id="services">
     <h2>Our Services</h2>
     <ul>
@@ -132,38 +195,28 @@
     </p>
   </section>
 
-  <!-- Contact -->
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact Us</h2>
     <p>Need a quotation or project support? Reach out to us.</p>
 
-    <form action="https://formspree.io/f/xqarvayz" method="POST" style="max-width:400px;">
-      <input type="text" name="name" placeholder="Your Name" required
-             style="width:100%; padding:10px; margin-bottom:10px;">
+    <form action="https://formspree.io/f/xqarvayz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Phone Number">
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
 
-      <input type="email" name="email" placeholder="Your Email" required
-             style="width:100%; padding:10px; margin-bottom:10px;">
-
-      <input type="text" name="phone" placeholder="Phone Number"
-             style="width:100%; padding:10px; margin-bottom:10px;">
-
-      <textarea name="message" rows="5" placeholder="Your Message" required
-                style="width:100%; padding:10px; margin-bottom:10px;"></textarea>
-
-      <button type="submit"
-              style="padding:10px 20px; background:#0a4da3; color:white; border:none;">
-        Send Message
-      </button>
+      <button type="submit">Send Message</button>
     </form>
 
-    <p style="margin-top:15px;">
-      📧 Email: neonoxgastech@gmail.com <br>
-      📞 Phone: +91-8867123061 <br>
-      📍 Location: India
+    <p style="margin-top:18px;">
+      📧 neonoxgastech@gmail.com <br>
+      📞 +91-8867123061 <br>
+      📍 India
     </p>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     © 2025 Neonox Gas Tech. All Rights Reserved.
   </footer>
