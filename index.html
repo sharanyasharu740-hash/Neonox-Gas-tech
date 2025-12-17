@@ -6,12 +6,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <style>
-    /* RESET */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: "Segoe UI", Arial, sans-serif;
+      font-family: Arial, Helvetica, sans-serif;
     }
 
     body {
@@ -20,53 +19,47 @@
       line-height: 1.6;
     }
 
-    /* HERO SECTION */
+    /* HERO */
     .hero {
-      min-height: 100vh;
-      background: linear-gradient(135deg, #003b7a, #005bb5);
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+      background: linear-gradient(135deg, #003a8f, #005fcc);
+      padding: 70px 20px 80px;
       text-align: center;
-      padding: 60px 20px;
+      color: #fff;
     }
 
-    /* LOGO */
     .site-logo {
       width: 240px;
       max-width: 95%;
       height: auto;
+      margin-bottom: 22px;
       padding: 18px;
       background: #ffffff;
       border-radius: 20px;
       box-shadow: 0 25px 45px rgba(0,0,0,0.35);
-      margin-bottom: 22px;
     }
 
-    h1 {
-      font-size: 42px;
-      color: #ffffff;
-      margin-bottom: 12px;
+    .hero h1 {
+      font-size: 36px;
+      margin-bottom: 10px;
     }
 
-    .tagline {
+    .hero p {
       font-size: 18px;
-      color: #e6f1ff;
-      max-width: 700px;
+      opacity: 0.95;
     }
 
     /* NAV */
     nav {
-      margin-top: 35px;
+      background: #002e6d;
+      padding: 12px;
+      text-align: center;
     }
 
     nav a {
-      color: #ffffff;
+      color: #fff;
+      margin: 0 15px;
       text-decoration: none;
-      margin: 0 16px;
-      font-weight: 600;
-      font-size: 16px;
+      font-weight: bold;
     }
 
     nav a:hover {
@@ -76,116 +69,96 @@
     /* SECTIONS */
     section {
       max-width: 1100px;
-      margin: 60px auto;
-      padding: 0 20px;
+      margin: 40px auto;
+      background: #fff;
+      padding: 35px;
+      border-radius: 12px;
+      box-shadow: 0 10px 25px rgba(0,0,0,0.08);
     }
 
     section h2 {
-      font-size: 30px;
+      color: #003a8f;
+      margin-bottom: 15px;
+      border-bottom: 3px solid #005fcc;
+      display: inline-block;
+      padding-bottom: 6px;
+    }
+
+    section p {
       margin-bottom: 12px;
-      color: #003b7a;
-    }
-
-    .divider {
-      width: 80px;
-      height: 4px;
-      background: #005bb5;
-      margin-bottom: 18px;
-    }
-
-    p {
-      margin-bottom: 14px;
-      font-size: 16px;
     }
 
     ul {
-      margin-left: 18px;
-      margin-bottom: 16px;
+      margin-top: 10px;
+      padding-left: 20px;
     }
 
     ul li {
       margin-bottom: 8px;
     }
 
-    /* CARD LOOK */
-    .card {
-      background: #ffffff;
-      padding: 30px;
-      border-radius: 18px;
-      box-shadow: 0 12px 30px rgba(0,0,0,0.08);
-    }
-
     /* CONTACT FORM */
-    form {
-      margin-top: 20px;
-    }
-
     form input,
     form textarea {
       width: 100%;
       padding: 12px;
-      margin-bottom: 14px;
-      border-radius: 8px;
+      margin: 10px 0;
+      border-radius: 6px;
       border: 1px solid #ccc;
       font-size: 15px;
     }
 
     form button {
-      background: #005bb5;
-      color: #ffffff;
+      background: #005fcc;
+      color: #fff;
       border: none;
-      padding: 12px 24px;
-      border-radius: 8px;
+      padding: 12px 25px;
       font-size: 16px;
+      border-radius: 6px;
       cursor: pointer;
     }
 
     form button:hover {
-      background: #003b7a;
+      background: #003a8f;
     }
 
-    /* WHATSAPP BUTTON */
-    .whatsapp-btn {
+    /* WHATSAPP */
+    .whatsapp {
       position: fixed;
       right: 20px;
       bottom: 20px;
       background: #25d366;
-      color: #ffffff;
-      padding: 14px 20px;
-      border-radius: 30px;
+      color: #fff;
+      padding: 14px 18px;
+      border-radius: 50px;
       text-decoration: none;
       font-weight: bold;
       box-shadow: 0 10px 25px rgba(0,0,0,0.3);
       z-index: 999;
     }
 
-    .whatsapp-btn:hover {
+    .whatsapp:hover {
       background: #1ebe5d;
     }
 
     /* FOOTER */
     footer {
-      background: #003b7a;
-      color: #ffffff;
       text-align: center;
       padding: 20px;
-      margin-top: 60px;
+      background: #002e6d;
+      color: #fff;
+      margin-top: 40px;
     }
 
     /* MOBILE */
     @media (max-width: 768px) {
-      h1 {
-        font-size: 30px;
+      .hero h1 {
+        font-size: 28px;
       }
 
       .site-logo {
         width: 170px;
         padding: 14px;
-      }
-
-      nav a {
-        margin: 0 10px;
-        font-size: 14px;
       }
     }
   </style>
@@ -193,97 +166,64 @@
 
 <body>
 
-  <!-- HERO -->
   <div class="hero">
     <img src="Neonox_Gas.png" alt="Neonox Gas Tech Logo" class="site-logo">
-
     <h1>Neonox Gas Tech</h1>
-    <p class="tagline">
-      High-Purity Gas Pipeline Solutions with Precision Orbital Welding
-    </p>
-
-    <nav>
-      <a href="#about">About</a>
-      <a href="#services">Services</a>
-      <a href="#contact">Contact</a>
-    </nav>
+    <p>High-Purity Gas Pipeline Solutions with Precision Orbital Welding</p>
   </div>
 
-  <!-- ABOUT -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
   <section id="about">
-    <div class="card">
-      <h2>About Us</h2>
-      <div class="divider"></div>
-
-      <p>
-        <strong>Neonox Gas Tech</strong> specializes in high-precision orbital welding,
-        high-purity stainless steel pipeline fabrication, and hazardous gas handling systems.
-      </p>
-
-      <p>
-        We deliver complete turnkey solutions including design, fabrication,
-        installation, testing, and commissioning with strong emphasis on safety,
-        accuracy, and international quality standards.
-      </p>
-    </div>
+    <h2>About Us</h2>
+    <p>
+      <strong>Neonox Gas Tech</strong> specializes in high-precision orbital welding,
+      high-purity stainless steel pipelines, and hazardous gas handling systems.
+    </p>
+    <p>
+      We deliver turnkey solutions including design, fabrication, installation,
+      testing, and commissioning with strict safety and international quality standards.
+    </p>
   </section>
 
-  <!-- SERVICES -->
   <section id="services">
-    <div class="card">
-      <h2>Our Services</h2>
-      <div class="divider"></div>
-
-      <ul>
-        <li>Orbital Welding (1/8” to 1/2” SS Tubes)</li>
-        <li>High-Purity Stainless Steel Gas Pipelines</li>
-        <li>Industrial Gas Manifold Design & Installation</li>
-        <li>TIG Welding for Stainless Steel & Alloy Piping</li>
-        <li>Medical Gas Pipeline Systems (MGPS)</li>
-        <li>Specialty & Hazardous Gas Piping</li>
-        <li>Pressure Testing, Commissioning & AMC</li>
-      </ul>
-
-      <p>
-        <strong>Gases handled:</strong>
-        Oxygen, Nitrogen, Argon, CO₂, Hydrogen, Helium, SF₆,
-        Carbon Monoxide, Methane, Ethylene, Hydrocarbons.
-      </p>
-    </div>
+    <h2>Our Services</h2>
+    <ul>
+      <li>Orbital Welding (1/8” to 1/2” SS Tubes)</li>
+      <li>High-Purity Stainless Steel Gas Pipelines</li>
+      <li>Industrial Gas Manifold Design & Installation</li>
+      <li>TIG Welding for Stainless Steel & Alloy Piping</li>
+      <li>Medical Gas Pipeline Systems (MGPS)</li>
+      <li>Specialty & Hazardous Gas Piping</li>
+      <li>Pressure Testing, Commissioning & AMC</li>
+    </ul>
   </section>
 
-  <!-- CONTACT -->
   <section id="contact">
-    <div class="card">
-      <h2>Contact Us</h2>
-      <div class="divider"></div>
+    <h2>Contact Us</h2>
+    <form action="https://formspree.io/f/xqarvayz" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="text" name="phone" placeholder="Phone Number">
+      <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
 
-      <p>Need a quotation or project support? Reach out to us.</p>
-
-      <form action="https://formspree.io/f/xqarvayz" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="phone" placeholder="Phone Number">
-        <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
-
-      <p style="margin-top:16px;">
-        📧 neonoxgastech@gmail.com<br>
-        📞 +91-8867123061<br>
-        📍 India
-      </p>
-    </div>
+    <p style="margin-top:15px;">
+      📧 neonoxgastech@gmail.com<br>
+      📞 +91-8867123061<br>
+      📍 India
+    </p>
   </section>
 
-  <!-- WHATSAPP -->
-  <a class="whatsapp-btn"
-     href="https://wa.me/918867123061"
-     target="_blank">
-     WhatsApp Us
+  <a class="whatsapp" href="https://wa.me/918867123061" target="_blank">
+    WhatsApp Us
   </a>
 
-  <!-- FOOTER -->
   <footer>
     © 2025 Neonox Gas Tech. All Rights Reserved.
   </footer>
