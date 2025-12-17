@@ -152,14 +152,34 @@
         font-size: 28px;
       }
     }
-  </style>
+  </style>/* LOGO DISPLAY FIX */
+.site-logo {
+  width: 180px;
+  max-width: 90%;
+  height: auto;
+  display: block;
+  margin: 0 auto 18px;
+  padding: 14px;
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.3);
+}
+
+/* MOBILE OPTIMIZATION */
+@media (max-width: 768px) {
+  .site-logo {
+    width: 140px;
+    padding: 12px;
+  }
+}
+
 </head>
 
 <body>
 
   <!-- HERO -->
   <div class="hero">
-    <img src="logo-new.png" alt="Neonox_Gas.png">
+   <img src="Neonox_Gas.png" alt="Neonox Gas Tech Logo" class="site-logo">
     <h1>Neonox Gas Tech</h1>
     <p>High-Purity Gas Pipeline Solutions with Precision Orbital Welding</p>
   </div>
