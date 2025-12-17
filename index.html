@@ -154,15 +154,23 @@
     }
   </style>/* LOGO DISPLAY FIX */
 .site-logo {
-  width: 180px;
-  max-width: 90%;
+  width: 240px;              /* LOGO SIZE INCREASED */
+  max-width: 95%;
   height: auto;
   display: block;
-  margin: 0 auto 18px;
-  padding: 14px;
+  margin: 0 auto 22px;
+  padding: 18px;
   background: #ffffff;
-  border-radius: 16px;
-  box-shadow: 0 18px 35px rgba(0,0,0,0.3);
+  border-radius: 20px;
+  box-shadow: 0 25px 45px rgba(0,0,0,0.35);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .site-logo {
+    width: 170px;
+    padding: 14px;
+  }
 }
 
 /* MOBILE OPTIMIZATION */
