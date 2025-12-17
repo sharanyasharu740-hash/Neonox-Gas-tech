@@ -6,31 +6,40 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <style>
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
   font-family: "Segoe UI", Arial, sans-serif;
-  background: #f2f5f9;
+  background: #eef2f7;
   color: #222;
-  line-height: 1.55;
+  line-height: 1.6;
 }
 
-/* HERO */
+/* HERO WITH 3D BACKGROUND */
 .hero {
-  background: linear-gradient(135deg, #062f6e, #0a4da3);
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,0.25), transparent 60%),
+    linear-gradient(135deg, #062f6e, #0a4da3);
   color: white;
   text-align: center;
-  padding: 60px 20px 50px;
+  padding: 50px 20px 45px;
+  position: relative;
 }
 
+/* LOGO – UNCHANGED */
 .hero img {
-  width: 130px;
+  width: 150px;
   margin-bottom: 12px;
-  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.45));
+  filter: drop-shadow(0 14px 22px rgba(0,0,0,0.45));
 }
 
 .hero h1 {
-  margin: 8px 0 6px;
+  margin: 6px 0 6px;
   font-size: 34px;
+  font-weight: 700;
 }
 
 .hero p {
@@ -42,30 +51,30 @@ body {
 /* NAV */
 nav {
   background: #052857;
-  text-align: center;
   padding: 10px;
+  text-align: center;
 }
 
 nav a {
   color: white;
-  margin: 0 14px;
   text-decoration: none;
+  margin: 0 14px;
   font-weight: 600;
 }
 
 /* SECTIONS */
 section {
   max-width: 1100px;
-  margin: 22px auto;
+  margin: 20px auto;
   background: white;
-  padding: 26px 30px;
+  padding: 22px 26px;
   border-radius: 10px;
-  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
+  box-shadow: 0 10px 22px rgba(0,0,0,0.08);
 }
 
 h2 {
+  margin-bottom: 8px;
   color: #062f6e;
-  margin-bottom: 10px;
   border-bottom: 3px solid #0a4da3;
   display: inline-block;
   padding-bottom: 4px;
@@ -76,7 +85,7 @@ section p {
 }
 
 ul {
-  padding-left: 20px;
+  padding-left: 18px;
   margin: 8px 0;
 }
 
@@ -90,18 +99,18 @@ form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
-  border: 1px solid #ccc;
   border-radius: 4px;
+  border: 1px solid #ccc;
 }
 
 form button {
   background: #0a4da3;
   color: white;
-  padding: 10px 24px;
   border: none;
+  padding: 10px 26px;
   font-size: 15px;
-  cursor: pointer;
   border-radius: 4px;
+  cursor: pointer;
 }
 
 form button:hover {
@@ -114,34 +123,37 @@ footer {
   color: white;
   text-align: center;
   padding: 14px;
-  margin-top: 30px;
+  margin-top: 28px;
   font-size: 14px;
 }
 
-/* WHATSAPP */
+/* WHATSAPP BUTTON */
 .whatsapp {
   position: fixed;
   bottom: 18px;
   right: 18px;
   background: #25D366;
   color: white;
-  padding: 13px 18px;
+  padding: 14px 18px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  z-index: 1000;
 }
 </style>
 </head>
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
   <img src="logo.png" alt="Neonox Gas Tech Logo">
   <h1>Neonox Gas Tech</h1>
   <p>High-purity gas pipeline solutions with precision orbital welding</p>
 </div>
 
+<!-- NAV -->
 <nav>
   <a href="#about">About</a>
   <a href="#why">Why Us</a>
@@ -149,14 +161,16 @@ footer {
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- ABOUT -->
 <section id="about">
 <h2>About Us</h2>
 <p><strong>Neonox Gas Tech</strong> specializes in high-precision orbital welding and gas pipeline systems for high-purity and hazardous gas applications.</p>
-<p>We deliver turnkey solutions including design, fabrication, installation, testing, and commissioning with strong focus on safety, accuracy, and international quality standards.</p>
+<p>We deliver turnkey solutions covering design, fabrication, installation, testing, and commissioning with strong focus on safety, accuracy, and international quality standards.</p>
 </section>
 
+<!-- WHY US -->
 <section id="why">
-<h2>Why Choose Us</h2>
+<h2>Why Choose Neonox Gas Tech</h2>
 <ul>
 <li>Certified and experienced orbital welding professionals</li>
 <li>High-purity, leak-proof pipeline execution</li>
@@ -167,6 +181,7 @@ footer {
 </ul>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
 <h2>Our Services</h2>
 <ul>
@@ -181,9 +196,10 @@ footer {
 <p><strong>Gases handled:</strong> Oxygen, Nitrogen, Argon, CO₂, Hydrogen, Helium, SF₆, Carbon Monoxide, Methane, Ethylene, Hydrocarbons.</p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
 <h2>Contact Us</h2>
-<p>Need a quotation or project support? Reach out to us.</p>
+<p>For quotations and project discussions, contact us.</p>
 
 <form action="https://formspree.io/f/xqarvayz" method="POST">
 <input type="text" name="name" placeholder="Your Name" required>
@@ -193,7 +209,7 @@ footer {
 <button type="submit">Send Message</button>
 </form>
 
-<p style="margin-top:8px;">
+<p>
 📧 neonoxgastech@gmail.com<br>
 📞 +91-8867123061<br>
 📍 India
