@@ -11,43 +11,44 @@ body {
   font-family: "Segoe UI", Arial, sans-serif;
   background: #f2f5f9;
   color: #222;
+  line-height: 1.55;
 }
 
-/* HERO SECTION */
+/* HERO */
 .hero {
   background: linear-gradient(135deg, #062f6e, #0a4da3);
   color: white;
   text-align: center;
-  padding: 70px 20px 60px;
+  padding: 60px 20px 50px;
 }
 
 .hero img {
-  width: 140px;
-  margin-bottom: 15px;
-  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.4));
+  width: 130px;
+  margin-bottom: 12px;
+  filter: drop-shadow(0 10px 18px rgba(0,0,0,0.45));
 }
 
 .hero h1 {
-  margin: 10px 0 8px;
-  font-size: 36px;
+  margin: 8px 0 6px;
+  font-size: 34px;
 }
 
 .hero p {
   margin: 0;
-  font-size: 18px;
-  opacity: 0.9;
+  font-size: 17px;
+  opacity: 0.95;
 }
 
 /* NAV */
 nav {
   background: #052857;
   text-align: center;
-  padding: 12px;
+  padding: 10px;
 }
 
 nav a {
   color: white;
-  margin: 0 15px;
+  margin: 0 14px;
   text-decoration: none;
   font-weight: 600;
 }
@@ -55,29 +56,28 @@ nav a {
 /* SECTIONS */
 section {
   max-width: 1100px;
-  margin: 30px auto;
+  margin: 22px auto;
   background: white;
-  padding: 30px;
+  padding: 26px 30px;
   border-radius: 10px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.08);
 }
 
 h2 {
   color: #062f6e;
-  margin-bottom: 12px;
+  margin-bottom: 10px;
   border-bottom: 3px solid #0a4da3;
   display: inline-block;
   padding-bottom: 4px;
 }
 
-p {
-  margin: 8px 0;
-  line-height: 1.55;
+section p {
+  margin: 6px 0;
 }
 
 ul {
   padding-left: 20px;
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 li {
@@ -85,7 +85,8 @@ li {
 }
 
 /* CONTACT FORM */
-form input, form textarea {
+form input,
+form textarea {
   width: 100%;
   padding: 10px;
   margin-bottom: 10px;
@@ -96,9 +97,9 @@ form input, form textarea {
 form button {
   background: #0a4da3;
   color: white;
-  padding: 10px 25px;
+  padding: 10px 24px;
   border: none;
-  font-size: 16px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 4px;
 }
@@ -112,18 +113,19 @@ footer {
   background: #062f6e;
   color: white;
   text-align: center;
-  padding: 15px;
-  margin-top: 40px;
+  padding: 14px;
+  margin-top: 30px;
+  font-size: 14px;
 }
 
-/* WHATSAPP BUTTON */
+/* WHATSAPP */
 .whatsapp {
   position: fixed;
-  bottom: 20px;
-  right: 20px;
+  bottom: 18px;
+  right: 18px;
   background: #25D366;
   color: white;
-  padding: 14px 18px;
+  padding: 13px 18px;
   border-radius: 30px;
   text-decoration: none;
   font-weight: bold;
@@ -135,7 +137,6 @@ footer {
 <body>
 
 <div class="hero">
-  <!-- Logo placeholder (replace src later) -->
   <img src="logo.png" alt="Neonox Gas Tech Logo">
   <h1>Neonox Gas Tech</h1>
   <p>High-purity gas pipeline solutions with precision orbital welding</p>
@@ -143,18 +144,18 @@ footer {
 
 <nav>
   <a href="#about">About</a>
+  <a href="#why">Why Us</a>
   <a href="#services">Services</a>
-  <a href="#industries">Industries</a>
   <a href="#contact">Contact</a>
 </nav>
 
 <section id="about">
 <h2>About Us</h2>
 <p><strong>Neonox Gas Tech</strong> specializes in high-precision orbital welding and gas pipeline systems for high-purity and hazardous gas applications.</p>
-<p>We deliver complete turnkey solutions including design, fabrication, installation, testing, and commissioning with strong focus on safety, accuracy, and international quality standards.</p>
+<p>We deliver turnkey solutions including design, fabrication, installation, testing, and commissioning with strong focus on safety, accuracy, and international quality standards.</p>
 </section>
 
-<section>
+<section id="why">
 <h2>Why Choose Us</h2>
 <ul>
 <li>Certified and experienced orbital welding professionals</li>
@@ -192,7 +193,7 @@ footer {
 <button type="submit">Send Message</button>
 </form>
 
-<p style="margin-top:10px;">
+<p style="margin-top:8px;">
 📧 neonoxgastech@gmail.com<br>
 📞 +91-8867123061<br>
 📍 India
@@ -209,4 +210,3 @@ WhatsApp Us
 
 </body>
 </html>
-
