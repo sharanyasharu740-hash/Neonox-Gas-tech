@@ -10,9 +10,8 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family:Arial, Helvetica, sans-serif;
+  font-family:Arial,Helvetica,sans-serif;
 }
-
 body{
   background:#f4f7fb;
   color:#222;
@@ -22,28 +21,24 @@ body{
 /* HERO */
 .hero{
   background:linear-gradient(135deg,#003a8f,#005fcc);
+  padding:90px 20px 70px;
   text-align:center;
-  padding:90px 20px 100px;
   color:#fff;
 }
-
-/* LOGO FIX – CENTER + BIGGER */
 .hero img{
-  display:block;
-  margin:0 auto 30px auto;
-  width:300px;               /* LOGO BIGGER */
+  width:260px;
   max-width:95%;
   background:#fff;
-  padding:28px;              /* MORE INNER SPACE */
-  border-radius:26px;
-  box-shadow:0 35px 60px rgba(0,0,0,0.35);
+  padding:20px;
+  border-radius:22px;
+  box-shadow:0 30px 60px rgba(0,0,0,0.35);
+  display:block;
+  margin:0 auto 28px;
 }
-
+.hero h1{display:none;}
 .hero p{
   font-size:20px;
-  max-width:900px;
-  margin:0 auto;
-  font-weight:600;
+  font-weight:500;
 }
 
 /* NAV */
@@ -52,100 +47,75 @@ nav{
   padding:14px;
   text-align:center;
 }
-
 nav a{
   color:#fff;
   margin:0 18px;
   text-decoration:none;
   font-weight:bold;
 }
+nav a:hover{text-decoration:underline;}
 
-nav a:hover{
-  text-decoration:underline;
-}
-
-/* SECTION */
+/* SECTIONS */
 section{
-  max-width:1150px;
-  margin:55px auto;
+  max-width:1200px;
+  margin:45px auto;
   background:#fff;
   padding:45px;
   border-radius:16px;
-  box-shadow:0 18px 35px rgba(0,0,0,0.08);
+  box-shadow:0 12px 30px rgba(0,0,0,0.08);
 }
-
 section h2{
   color:#003a8f;
-  margin-bottom:18px;
+  margin-bottom:20px;
   border-bottom:3px solid #005fcc;
   display:inline-block;
   padding-bottom:6px;
 }
+section p{margin-bottom:14px;}
+ul{padding-left:20px;}
+ul li{margin-bottom:8px;}
 
-section p{
-  margin-bottom:14px;
-}
-
-ul{
-  padding-left:20px;
-}
-
-ul li{
-  margin-bottom:8px;
-}
-
-/* SERVICE GRID WITH IMAGES */
+/* SERVICES GRID */
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-  gap:30px;
-  margin-top:30px;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
 }
-
 .card{
-  background:#f8fbff;
+  background:#f9fbff;
   border-radius:14px;
-  box-shadow:0 12px 22px rgba(0,0,0,0.1);
   overflow:hidden;
+  box-shadow:0 10px 25px rgba(0,0,0,0.08);
 }
-
 .card img{
   width:100%;
   height:190px;
   object-fit:cover;
 }
-
-.card div{
-  padding:20px;
-}
-
+.card div{padding:18px;}
 .card h3{
   color:#003a8f;
   margin-bottom:8px;
 }
 
-/* FORM */
-form input, form textarea{
+/* CONTACT */
+form input,form textarea{
   width:100%;
   padding:12px;
   margin:10px 0;
   border-radius:6px;
   border:1px solid #ccc;
 }
-
 form button{
   background:#005fcc;
   color:#fff;
   border:none;
-  padding:14px 26px;
-  font-size:16px;
+  padding:12px 26px;
   border-radius:6px;
+  font-size:16px;
   cursor:pointer;
 }
-
-form button:hover{
-  background:#003a8f;
-}
+form button:hover{background:#003a8f;}
 
 /* WHATSAPP */
 .whatsapp{
@@ -154,27 +124,24 @@ form button:hover{
   bottom:20px;
   background:#25d366;
   color:#fff;
-  padding:14px 20px;
+  padding:15px 22px;
   border-radius:50px;
   text-decoration:none;
   font-weight:bold;
-  box-shadow:0 12px 25px rgba(0,0,0,0.3);
+  box-shadow:0 12px 30px rgba(0,0,0,0.35);
   z-index:999;
 }
 
 /* FOOTER */
 footer{
-  background:#002e6d;
-  color:#fff;
   text-align:center;
   padding:20px;
-  margin-top:60px;
+  background:#002e6d;
+  color:#fff;
 }
 
-/* MOBILE */
 @media(max-width:768px){
-  .hero img{width:200px;padding:20px;}
-  .hero p{font-size:17px;}
+  .hero img{width:190px;padding:14px;}
 }
 </style>
 </head>
@@ -187,112 +154,95 @@ footer{
   <p>High-Purity Gas Pipeline Solutions & Precision Orbital Welding</p>
 </div>
 
+<!-- NAV -->
 <nav>
   <a href="#about">About</a>
   <a href="#services">Services</a>
   <a href="#contact">Contact</a>
 </nav>
 
+<!-- ABOUT -->
 <section id="about">
-  <h2>About Us</h2>
-  <p>
-    Neonox Gas Tech specializes in high-precision orbital welding and
-    high-purity stainless steel gas pipeline systems for industrial,
-    medical, and hazardous gas applications.
-  </p>
-  <p>
-    We deliver turnkey solutions covering design, fabrication,
-    installation, testing, and commissioning with strong focus on
-    safety, accuracy, and international quality standards.
-  </p>
+<h2>About Us</h2>
+<p><strong>Neonox Gas Tech</strong> specializes in high-precision orbital welding and high-purity gas pipeline systems for critical industrial applications.</p>
+<p>We provide turnkey solutions covering design, fabrication, installation, testing, commissioning, and maintenance, ensuring safety, accuracy, and international quality standards.</p>
 </section>
 
+<!-- SERVICES -->
 <section id="services">
-  <h2>Our Services</h2>
+<h2>Our Services</h2>
 
-  <div class="services">
+<div class="services">
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc" alt="Orbital Welding">
-      <div>
-        <h3>Orbital Welding</h3>
-        <p>Precision orbital welding for stainless steel tubes ensuring leak-proof and contamination-free joints.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581091870622-1e7e8e4f5c5c" alt="Orbital Welding">
+<div>
+<h3>Orbital Welding</h3>
+<p>Precision orbital welding for stainless steel tubes ensuring contamination-free, leak-proof joints.</p>
+</div>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581091870627-3b9e6f5a6b25" alt="Gas Pipeline Installation">
-      <div>
-        <h3>High-Purity Gas Pipelines</h3>
-        <p>Design and installation of ultra-clean gas pipelines for critical applications.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1600880292089-90a7e086ee0c" alt="Gas Pipeline">
+<div>
+<h3>High-Purity Gas Pipelines</h3>
+<p>Design and installation of SS gas pipelines for hazardous and high-purity gases.</p>
+</div>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581093458791-9bfa0a0c0e0d" alt="Gas Manifold System">
-      <div>
-        <h3>Gas Manifold Systems</h3>
-        <p>Industrial and laboratory gas manifold design and execution.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1580281657527-47d44f0b3c02" alt="Medical Gas">
+<div>
+<h3>Medical Gas Pipelines</h3>
+<p>MGPS systems for hospitals including oxygen, vacuum, and medical air pipelines.</p>
+</div>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Medical Gas Pipeline">
-      <div>
-        <h3>Medical Gas Pipelines</h3>
-        <p>MGPS systems for hospitals and healthcare facilities.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581091012184-7f5a4f33c5e3" alt="TIG Welding">
+<div>
+<h3>TIG Welding</h3>
+<p>High-quality TIG welding for stainless steel and alloy piping systems.</p>
+</div>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" alt="TIG Welding">
-      <div>
-        <h3>TIG Welding</h3>
-        <p>High-quality TIG welding for stainless steel and alloy piping.</p>
-      </div>
-    </div>
+<div class="card">
+<img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837" alt="Testing">
+<div>
+<h3>Testing & Commissioning</h3>
+<p>Pressure testing, commissioning, documentation, and annual maintenance services.</p>
+</div>
+</div>
 
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1581092334631-54d7a1d1f94c" alt="Testing and Commissioning">
-      <div>
-        <h3>Testing & Commissioning</h3>
-        <p>Pressure testing, commissioning, and annual maintenance services.</p>
-      </div>
-    </div>
+</div>
 
-  </div>
-
-  <p style="margin-top:22px;">
-    <strong>Gases handled:</strong> Oxygen, Nitrogen, Argon, CO₂, Hydrogen,
-    Helium, SF₆, Carbon Monoxide, Methane, Ethylene, Hydrocarbons.
-  </p>
+<p style="margin-top:20px;"><strong>Gases Handled:</strong> Oxygen, Nitrogen, Argon, CO₂, Hydrogen, Helium, SF₆, Carbon Monoxide, Methane, Ethylene, Hydrocarbons.</p>
 </section>
 
+<!-- CONTACT -->
 <section id="contact">
-  <h2>Contact Us</h2>
-  <p>For quotations and project discussions, reach out to us.</p>
+<h2>Contact Us</h2>
 
-  <form action="https://formspree.io/f/xqarvayz" method="POST">
-    <input type="text" name="name" placeholder="Your Name" required>
-    <input type="email" name="email" placeholder="Your Email" required>
-    <input type="text" name="phone" placeholder="Phone Number">
-    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+<form action="https://formspree.io/f/xqarvayz" method="POST">
+<input type="text" name="name" placeholder="Your Name" required>
+<input type="email" name="email" placeholder="Your Email" required>
+<input type="text" name="phone" placeholder="Phone Number">
+<textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+<button type="submit">Send Message</button>
+</form>
 
-  <p style="margin-top:15px;">
-    📧 neonoxgastech@gmail.com<br>
-    📞 +91-8867123061<br>
-    📍 India
-  </p>
+<p style="margin-top:15px;">
+📧 neonoxgastech@gmail.com<br>
+📞 +91-8867123061<br>
+📍 India
+</p>
 </section>
 
-<a class="whatsapp" href="https://wa.me/918867123061" target="_blank">
-  WhatsApp Us
-</a>
+<!-- WHATSAPP -->
+<a class="whatsapp" href="https://wa.me/918867123061" target="_blank">WhatsApp Us</a>
 
 <footer>
-  © 2025 Neonox Gas Tech. All Rights Reserved.
+© 2025 Neonox Gas Tech
 </footer>
 
 </body>
