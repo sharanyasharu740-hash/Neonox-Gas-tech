@@ -2,122 +2,170 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Neonox Gas Tech</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Neonox Gas Tech</title>
 
 <style>
-body {
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-  background: #f4f7fb;
-  color: #222;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+  background:#f4f7fb;
+  color:#222;
+  line-height:1.6;
 }
 
 /* HERO */
-.hero {
-  background: linear-gradient(135deg, #0b2e59, #145da0);
-  text-align: center;
-  padding: 70px 20px 60px;
-  color: white;
+.hero{
+  background:linear-gradient(135deg,#003a8f,#005fcc);
+  text-align:center;
+  padding:80px 20px 90px;
+  color:#fff;
 }
 
-.hero img {
-  width: 220px;
-  max-width: 90%;
-  background: white;
-  padding: 16px;
-  border-radius: 18px;
-  box-shadow: 0 22px 45px rgba(0,0,0,0.35);
-  margin-bottom: 18px;
+.hero img{
+  width:260px;
+  max-width:90%;
+  background:#fff;
+  padding:20px;
+  border-radius:22px;
+  box-shadow:0 30px 55px rgba(0,0,0,0.35);
+  margin-bottom:25px;
 }
 
-.hero h1 {
-  font-size: 36px;
-  margin: 0;
-}
-
-.hero p {
-  font-size: 18px;
-  margin-top: 8px;
+.hero p{
+  font-size:20px;
+  max-width:850px;
+  margin:0 auto;
 }
 
 /* NAV */
-nav {
-  background: #0a2545;
-  text-align: center;
-  padding: 12px;
+nav{
+  background:#002e6d;
+  padding:14px;
+  text-align:center;
 }
 
-nav a {
-  color: white;
-  margin: 0 15px;
-  text-decoration: none;
-  font-weight: bold;
+nav a{
+  color:#fff;
+  margin:0 18px;
+  text-decoration:none;
+  font-weight:bold;
+}
+
+nav a:hover{
+  text-decoration:underline;
 }
 
 /* SECTION */
-section {
-  max-width: 1100px;
-  margin: 35px auto;
-  padding: 30px;
-  background: white;
-  border-radius: 14px;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+section{
+  max-width:1100px;
+  margin:50px auto;
+  background:#fff;
+  padding:40px;
+  border-radius:14px;
+  box-shadow:0 15px 30px rgba(0,0,0,0.08);
 }
 
-section h2 {
-  color: #0b2e59;
-  border-bottom: 3px solid #145da0;
-  display: inline-block;
-  padding-bottom: 6px;
+section h2{
+  color:#003a8f;
+  margin-bottom:15px;
+  border-bottom:3px solid #005fcc;
+  display:inline-block;
+  padding-bottom:6px;
 }
 
-ul {
-  padding-left: 20px;
+section p{
+  margin-bottom:14px;
 }
 
-li {
-  margin-bottom: 8px;
+ul{
+  padding-left:20px;
+}
+
+ul li{
+  margin-bottom:8px;
+}
+
+/* SERVICE GRID */
+.services{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+  gap:25px;
+  margin-top:25px;
+}
+
+.card{
+  background:#f8fbff;
+  padding:22px;
+  border-radius:12px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+}
+
+.card h3{
+  color:#003a8f;
+  margin-bottom:8px;
 }
 
 /* FORM */
-input, textarea {
-  width: 100%;
-  padding: 12px;
-  margin-bottom: 12px;
-  border-radius: 6px;
-  border: 1px solid #ccc;
+form input, form textarea{
+  width:100%;
+  padding:12px;
+  margin:10px 0;
+  border-radius:6px;
+  border:1px solid #ccc;
 }
 
-button {
-  background: #145da0;
-  color: white;
-  border: none;
-  padding: 12px 26px;
-  font-size: 16px;
-  border-radius: 6px;
-  cursor: pointer;
+form button{
+  background:#005fcc;
+  color:#fff;
+  border:none;
+  padding:14px 26px;
+  font-size:16px;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+form button:hover{
+  background:#003a8f;
 }
 
 /* WHATSAPP */
-.whatsapp {
-  position: fixed;
-  right: 20px;
-  bottom: 20px;
-  background: #25d366;
-  color: white;
-  padding: 14px 18px;
-  border-radius: 50px;
-  text-decoration: none;
-  font-weight: bold;
+.whatsapp{
+  position:fixed;
+  right:20px;
+  bottom:20px;
+  background:#25d366;
+  color:#fff;
+  padding:14px 20px;
+  border-radius:50px;
+  text-decoration:none;
+  font-weight:bold;
+  box-shadow:0 12px 25px rgba(0,0,0,0.3);
+  z-index:999;
+}
+
+.whatsapp:hover{
+  background:#1ebe5d;
 }
 
 /* FOOTER */
-footer {
-  background: #0a2545;
-  color: white;
-  text-align: center;
-  padding: 20px;
+footer{
+  background:#002e6d;
+  color:#fff;
+  text-align:center;
+  padding:20px;
+  margin-top:50px;
+}
+
+/* MOBILE */
+@media(max-width:768px){
+  .hero img{width:180px;}
+  .hero p{font-size:17px;}
 }
 </style>
 </head>
@@ -126,8 +174,7 @@ footer {
 
 <div class="hero">
   <img src="Neonox_Gas.png" alt="Neonox Gas Tech Logo">
-  <h1>Neonox Gas Tech</h1>
-  <p>High-Purity Gas Pipeline Solutions & Precision Orbital Welding</p>
+  <p><strong>High-Purity Gas Pipeline Solutions & Precision Orbital Welding</strong></p>
 </div>
 
 <nav>
@@ -137,46 +184,85 @@ footer {
 </nav>
 
 <section id="about">
-<h2>About Us</h2>
-<p><strong>Neonox Gas Tech</strong> delivers high-precision orbital welding and gas pipeline engineering for high-purity and hazardous gas systems.</p>
-<p>We provide end-to-end solutions including design, fabrication, installation, testing, commissioning, and long-term maintenance.</p>
+  <h2>About Us</h2>
+  <p>
+    Neonox Gas Tech specializes in high-precision orbital welding and
+    high-purity stainless steel gas pipeline systems for industrial,
+    medical, and hazardous gas applications.
+  </p>
+  <p>
+    We deliver complete turnkey solutions including design, fabrication,
+    installation, testing, and commissioning with strict safety and
+    international quality standards.
+  </p>
 </section>
 
 <section id="services">
-<h2>Our Services</h2>
-<ul>
-<li>Orbital Welding (1/8” to 1/2” SS Tubes)</li>
-<li>High-Purity Stainless Steel Gas Pipelines</li>
-<li>Industrial Gas Manifold Systems</li>
-<li>TIG Welding for Stainless Steel & Alloy Piping</li>
-<li>Medical Gas Pipeline Systems (MGPS)</li>
-<li>Pressure Testing & Commissioning</li>
-</ul>
+  <h2>Our Services</h2>
+
+  <div class="services">
+    <div class="card">
+      <h3>Orbital Welding</h3>
+      <p>Precision orbital welding for stainless steel tubes ensuring leak-proof and contamination-free joints.</p>
+    </div>
+
+    <div class="card">
+      <h3>High-Purity Gas Pipelines</h3>
+      <p>Design and installation of ultra-clean gas pipelines for critical applications.</p>
+    </div>
+
+    <div class="card">
+      <h3>Gas Manifold Systems</h3>
+      <p>Industrial and laboratory gas manifold design and execution.</p>
+    </div>
+
+    <div class="card">
+      <h3>Medical Gas Pipelines</h3>
+      <p>MGPS systems for hospitals and healthcare facilities.</p>
+    </div>
+
+    <div class="card">
+      <h3>TIG Welding</h3>
+      <p>High-quality TIG welding for stainless steel and alloy piping.</p>
+    </div>
+
+    <div class="card">
+      <h3>Testing & Commissioning</h3>
+      <p>Pressure testing, commissioning, and AMC services.</p>
+    </div>
+  </div>
+
+  <p style="margin-top:18px;">
+    <strong>Gases handled:</strong> Oxygen, Nitrogen, Argon, CO₂, Hydrogen,
+    Helium, SF₆, Carbon Monoxide, Methane, Ethylene, Hydrocarbons.
+  </p>
 </section>
 
 <section id="contact">
-<h2>Contact Us</h2>
+  <h2>Contact Us</h2>
+  <p>For quotations and project discussions, reach out to us.</p>
 
-<form action="https://formspree.io/f/xqarvayz" method="POST">
-<input type="text" name="name" placeholder="Your Name" required>
-<input type="email" name="email" placeholder="Your Email" required>
-<textarea name="message" placeholder="Your Message" required></textarea>
-<button type="submit">Send Message</button>
-</form>
+  <form action="https://formspree.io/f/xqarvayz" method="POST">
+    <input type="text" name="name" placeholder="Your Name" required>
+    <input type="email" name="email" placeholder="Your Email" required>
+    <input type="text" name="phone" placeholder="Phone Number">
+    <textarea name="message" rows="5" placeholder="Your Message" required></textarea>
+    <button type="submit">Send Message</button>
+  </form>
 
-<p>
-📧 neonoxgastech@gmail.com<br>
-📞 +91-8867123061<br>
-📍 India
-</p>
+  <p style="margin-top:15px;">
+    📧 neonoxgastech@gmail.com<br>
+    📞 +91-8867123061<br>
+    📍 India
+  </p>
 </section>
 
 <a class="whatsapp" href="https://wa.me/918867123061" target="_blank">
-WhatsApp Us
+  WhatsApp Us
 </a>
 
 <footer>
-© 2025 Neonox Gas Tech
+  © 2025 Neonox Gas Tech. All Rights Reserved.
 </footer>
 
 </body>
