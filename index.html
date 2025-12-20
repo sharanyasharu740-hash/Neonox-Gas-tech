@@ -23,24 +23,27 @@ body{
 .hero{
   background:linear-gradient(135deg,#003a8f,#005fcc);
   text-align:center;
-  padding:80px 20px 90px;
+  padding:90px 20px 100px;
   color:#fff;
 }
 
+/* LOGO FIX – CENTER + BIGGER */
 .hero img{
-  width:260px;
-  max-width:90%;
+  display:block;
+  margin:0 auto 30px auto;
+  width:300px;               /* LOGO BIGGER */
+  max-width:95%;
   background:#fff;
-  padding:20px;
-  border-radius:22px;
-  box-shadow:0 30px 55px rgba(0,0,0,0.35);
-  margin-bottom:25px;
+  padding:28px;              /* MORE INNER SPACE */
+  border-radius:26px;
+  box-shadow:0 35px 60px rgba(0,0,0,0.35);
 }
 
 .hero p{
   font-size:20px;
-  max-width:850px;
+  max-width:900px;
   margin:0 auto;
+  font-weight:600;
 }
 
 /* NAV */
@@ -63,17 +66,17 @@ nav a:hover{
 
 /* SECTION */
 section{
-  max-width:1100px;
-  margin:50px auto;
+  max-width:1150px;
+  margin:55px auto;
   background:#fff;
-  padding:40px;
-  border-radius:14px;
-  box-shadow:0 15px 30px rgba(0,0,0,0.08);
+  padding:45px;
+  border-radius:16px;
+  box-shadow:0 18px 35px rgba(0,0,0,0.08);
 }
 
 section h2{
   color:#003a8f;
-  margin-bottom:15px;
+  margin-bottom:18px;
   border-bottom:3px solid #005fcc;
   display:inline-block;
   padding-bottom:6px;
@@ -91,19 +94,29 @@ ul li{
   margin-bottom:8px;
 }
 
-/* SERVICE GRID */
+/* SERVICE GRID WITH IMAGES */
 .services{
   display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
-  gap:25px;
-  margin-top:25px;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:30px;
+  margin-top:30px;
 }
 
 .card{
   background:#f8fbff;
-  padding:22px;
-  border-radius:12px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.08);
+  border-radius:14px;
+  box-shadow:0 12px 22px rgba(0,0,0,0.1);
+  overflow:hidden;
+}
+
+.card img{
+  width:100%;
+  height:190px;
+  object-fit:cover;
+}
+
+.card div{
+  padding:20px;
 }
 
 .card h3{
@@ -149,22 +162,18 @@ form button:hover{
   z-index:999;
 }
 
-.whatsapp:hover{
-  background:#1ebe5d;
-}
-
 /* FOOTER */
 footer{
   background:#002e6d;
   color:#fff;
   text-align:center;
   padding:20px;
-  margin-top:50px;
+  margin-top:60px;
 }
 
 /* MOBILE */
 @media(max-width:768px){
-  .hero img{width:180px;}
+  .hero img{width:200px;padding:20px;}
   .hero p{font-size:17px;}
 }
 </style>
@@ -172,9 +181,10 @@ footer{
 
 <body>
 
+<!-- HERO -->
 <div class="hero">
   <img src="Neonox_Gas.png" alt="Neonox Gas Tech Logo">
-  <p><strong>High-Purity Gas Pipeline Solutions & Precision Orbital Welding</strong></p>
+  <p>High-Purity Gas Pipeline Solutions & Precision Orbital Welding</p>
 </div>
 
 <nav>
@@ -191,9 +201,9 @@ footer{
     medical, and hazardous gas applications.
   </p>
   <p>
-    We deliver complete turnkey solutions including design, fabrication,
-    installation, testing, and commissioning with strict safety and
-    international quality standards.
+    We deliver turnkey solutions covering design, fabrication,
+    installation, testing, and commissioning with strong focus on
+    safety, accuracy, and international quality standards.
   </p>
 </section>
 
@@ -201,38 +211,58 @@ footer{
   <h2>Our Services</h2>
 
   <div class="services">
+
     <div class="card">
-      <h3>Orbital Welding</h3>
-      <p>Precision orbital welding for stainless steel tubes ensuring leak-proof and contamination-free joints.</p>
+      <img src="https://images.unsplash.com/photo-1581092580497-e0d23cbdf1dc" alt="Orbital Welding">
+      <div>
+        <h3>Orbital Welding</h3>
+        <p>Precision orbital welding for stainless steel tubes ensuring leak-proof and contamination-free joints.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>High-Purity Gas Pipelines</h3>
-      <p>Design and installation of ultra-clean gas pipelines for critical applications.</p>
+      <img src="https://images.unsplash.com/photo-1581091870627-3b9e6f5a6b25" alt="Gas Pipeline Installation">
+      <div>
+        <h3>High-Purity Gas Pipelines</h3>
+        <p>Design and installation of ultra-clean gas pipelines for critical applications.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Gas Manifold Systems</h3>
-      <p>Industrial and laboratory gas manifold design and execution.</p>
+      <img src="https://images.unsplash.com/photo-1581093458791-9bfa0a0c0e0d" alt="Gas Manifold System">
+      <div>
+        <h3>Gas Manifold Systems</h3>
+        <p>Industrial and laboratory gas manifold design and execution.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Medical Gas Pipelines</h3>
-      <p>MGPS systems for hospitals and healthcare facilities.</p>
+      <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b" alt="Medical Gas Pipeline">
+      <div>
+        <h3>Medical Gas Pipelines</h3>
+        <p>MGPS systems for hospitals and healthcare facilities.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>TIG Welding</h3>
-      <p>High-quality TIG welding for stainless steel and alloy piping.</p>
+      <img src="https://images.unsplash.com/photo-1591696205602-2f950c417cb9" alt="TIG Welding">
+      <div>
+        <h3>TIG Welding</h3>
+        <p>High-quality TIG welding for stainless steel and alloy piping.</p>
+      </div>
     </div>
 
     <div class="card">
-      <h3>Testing & Commissioning</h3>
-      <p>Pressure testing, commissioning, and AMC services.</p>
+      <img src="https://images.unsplash.com/photo-1581092334631-54d7a1d1f94c" alt="Testing and Commissioning">
+      <div>
+        <h3>Testing & Commissioning</h3>
+        <p>Pressure testing, commissioning, and annual maintenance services.</p>
+      </div>
     </div>
+
   </div>
 
-  <p style="margin-top:18px;">
+  <p style="margin-top:22px;">
     <strong>Gases handled:</strong> Oxygen, Nitrogen, Argon, CO₂, Hydrogen,
     Helium, SF₆, Carbon Monoxide, Methane, Ethylene, Hydrocarbons.
   </p>
